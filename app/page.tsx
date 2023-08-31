@@ -61,7 +61,7 @@ export default function Home() {
             onChange={handleInputChange}
           />
           <Button
-            className={clsx("w-[10rem]", {
+            className={clsx("!w-36", {
               "text-gray-500 hover:ring-0 hover:bg-transparent hover:border-[--border] hover:ring-offset-0": inputValue === "",
             })}
             type="submit"

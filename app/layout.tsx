@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Stoic Converter',
-  description: 'Convert your desired mp3 files from Youtube',
+  description: 'Convert your desired MP3 files from Youtube',
 }
 
 export default function RootLayout({
