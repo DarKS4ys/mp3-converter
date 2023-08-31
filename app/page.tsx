@@ -21,10 +21,10 @@ export default function Home() {
       const apiKey = process.env.API_KEY;
       const options = {
         method: 'GET',
-        url: 'https://youtube-mp3-download1.p.rapidapi.com/dl',
+        url: 'https://youtube-mp36.p.rapidapi.com/dl',
         headers: {
           'X-RapidAPI-Key': 'c7365e916emsh6fa6de3d9a066a8p1eb215jsnfebe297f369c',
-          'X-RapidAPI-Host': 'youtube-mp3-download1.p.rapidapi.com'
+          'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
         },
         params: {
           id: youtubeId
