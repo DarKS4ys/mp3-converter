@@ -47,7 +47,7 @@ export default function Home() {
         method: 'GET',
         url: 'https://youtube-mp36.p.rapidapi.com/dl',
         headers: {
-          'X-RapidAPI-Key': 'c7365e916emsh6fa6de3d9a066a8p1eb215jsnfebe297f369c',
+          'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY,
           'X-RapidAPI-Host': 'youtube-mp36.p.rapidapi.com'
         },
         params: {
