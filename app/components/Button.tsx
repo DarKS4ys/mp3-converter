@@ -1,25 +1,35 @@
 import { FC, ReactNode } from 'react';
-import React, { ReactElement } from 'react';
-import type { IconType } from 'react-icons';
-import clsx from 'clsx'; // Import the clsx library
+import React from 'react';
+import clsx from 'clsx';
 
 interface ButtonProps {
   onClick?: () => void;
-  className?: string; // Allow passing additional classes
-  children?: ReactNode; // Allow passing children
+  className?: string;
+  children?: ReactNode;
   disabled?: boolean;
   type?: "button" | "submit" | "reset"
 }
 
 const Button: FC<ButtonProps> = ({ onClick, className, children, disabled, type }) => {
-  const buttonClasses = clsx(
-    'flex justify-center items-center gap-1 w-full text-center p-2 px-6 rounded-lg border border-[--border] hover:bg-[--border] transition hover:ring-offset-2 ring-offset-black hover:ring ring-white/10',
-    className // Use the additional classes
+  const normalButtonClasses = clsx(
+    'flex justify-center items-center gap-1 w-full text-center p-2 px-6 rounded-lg ring-offset-black border ring-white/10 border-[--border] transition',
+    className
+  );
+
+  // Define separate class names for the hover state
+  const hoverButtonClasses = clsx(
+    'hover:bg-[--border] hover:ring-offset-2 hover:ring',
+    !disabled && 'cursor-pointer' // Only apply hover styles if not disabled
   );
 
   return (
-    <button onClick={onClick} className={buttonClasses} disabled={disabled} type={type}>
-      {children} {/* Render children */}
+    <button
+      onClick={onClick}
+      className={clsx(normalButtonClasses, !disabled && hoverButtonClasses)} // Conditionally apply hover styles
+      disabled={disabled}
+      type={type}
+    >
+      {children}
     </button>
   );
 };

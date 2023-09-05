@@ -9,7 +9,7 @@ interface InputProps {
   type: string;
   eye?: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  value?: string;
+  value?: string | null;
 }
 
 const Input: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
@@ -39,7 +39,7 @@ const Input: React.ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
     <div className={`duration-200 transition-all flex border p-2 rounded-lg w-full ${borderClassName}`}>
       <input
         ref={ref}
-        value={value}
+        value={value || ''}
         type={inputType}
         onChange={onChange}
         className={`bg-transparent items-center focus:border-white-60 w-full placeholder:text-[--highlight] outline-none ${className}`}
