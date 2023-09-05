@@ -128,11 +128,11 @@ export default function Home() {
         :null}
       <hr className="border-[--border]"/>
         <div className="flex justify-center items-center gap-4">
-          <SocialLink iconSize={36} link="/tiktok" icon={SiTiktok}/>
-          <SocialLink link="/rumble">
+          <SocialLink iconSize={36} link="https://tiktok-converter.vercel.app" icon={SiTiktok}/>
+          <SocialLink link="rumble-converter.vercel.app">
             <Image  width={36} height={36} src={RumbleIcon} alt="Rumble Icon"/>
           </SocialLink>
-          <SocialLink link="/ytmp3" iconSize={36} icon={AiFillYoutube}>
+          <SocialLink link="https://youtube-converter-six.vercel.app" iconSize={36} icon={AiFillYoutube}>
           </SocialLink>
         </div>
 
